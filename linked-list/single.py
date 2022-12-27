@@ -22,6 +22,15 @@ class LinkedList:
     @property
     def size(self):
         return self._size
+   
+    # pop the first item, head item
+    def popleft(self):
+        raise NotImplementedError
+        # TODO: add this
+
+    # pop the tail or last item
+    def pop(self):
+        raise NotImplementedError
 
     def add(self, item):
         n = Node(value=item)

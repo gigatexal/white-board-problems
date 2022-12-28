@@ -25,8 +25,14 @@ class LinkedList:
    
     # pop the first item, head item
     def popleft(self):
-        raise NotImplementedError
-        # TODO: add this
+        if self.size:
+            prev_head = self._head
+            new_head = prev_head.nxt
+            val = prev_head.value
+            del self._head
+            self._head = new_head
+            self._size = self._size - 1
+            return val
 
     # pop the tail or last item
     def pop(self):

@@ -36,7 +36,33 @@ class LinkedList:
 
     # pop the tail or last item
     def pop(self):
-        raise NotImplementedError
+        """
+        iterate through the list until
+        the final end node is found, it's
+        .next will point to None
+        while iterating keep track of:
+        current and previous nodes
+        when current.next points to nothing
+        we stop, we return it's value
+        delete it from the list
+        and then set the previous.next to None
+        """
+        if self.size:
+            previous, current = self._head, self._head
+            """
+            if self.size==1:
+                value = current.value
+                self._head = None
+                self._size = 0
+            else:
+            """
+            while current.nxt:
+                previous, current = current, current.nxt
+            value = current.value
+            previous._next = None
+            del current
+            return value
+                
 
     def add(self, item):
         n = Node(value=item)

@@ -49,13 +49,6 @@ class LinkedList:
         """
         if self.size:
             previous, current = self._head, self._head
-            """
-            if self.size==1:
-                value = current.value
-                self._head = None
-                self._size = 0
-            else:
-            """
             while current.nxt:
                 previous, current = current, current.nxt
             value = current.value

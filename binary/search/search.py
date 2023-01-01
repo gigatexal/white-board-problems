@@ -20,18 +20,27 @@ def exists(l: list, target)->bool:
     else:
         return False
 
+def find_index(l: list, target)->int|None:
+    if len(l):
+        if len(l) == 1:
+            if l[0] == target:
+                return 0
+            else:
+                return None
+        lower, upper = 0, len(l) - 1
+        if lower == target:
+            return lower
+        if upper == target:
+            return upper
+        
+        while lower <= upper:
+            midpoint = ( lower + upper ) // 2
+            if target == l[midpoint]:
+                return midpoint
+            elif target < l[midpoint]:
+                upper = upper - 1
+            elif target > l[midpoint]:
+                lower = lower + 1
+    return None
 
-def BinarySearch(l: list, target)->int|None:
-    index: int = -1 
-    if len(l) == 1:
-        return 0
-    midpoint: int = len(l) // 2
-
-
-
-
-
-
-
-    
 

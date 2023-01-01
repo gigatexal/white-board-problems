@@ -1,5 +1,9 @@
 """
 implement binary search
+
+return index: int or None
+index: is the index in the original list of the target
+return None if not found
 """
 
 def BinarySearch(l: list, target)->bool:

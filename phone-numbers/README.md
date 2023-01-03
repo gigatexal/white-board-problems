@@ -31,6 +31,6 @@ In the above example elm, flower, flowers all fit but the others do not.
 
 # part 2
 
-Now imagine the length of the given number after the 1-800 bit is large say bounded by 1 < number <= 1e3
+Now imagine the length of the given number after the 1-800 bit is large say the number of digits is bounded by 1 < number_length <= 1e3
 
 How would your algorithm change?
